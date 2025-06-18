@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDLux</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2>HDLux</h2>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="book.html">Book Now</a></li>
+                <li><a href="status.html">Check Status</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <button>Sign In</button>
+        </div>
+    </header>
+    
+    <section class="book-cont">
+        <h2>Book your stay</h2>
+        <div>
+            <form>
+                <span>
+                    <input type="text" id="first-name" placeholder="Firstname" required>
+                    <input type="text" id="last-name" placeholder="Last name" required>
+                </span>
+                <input type="email" id="email" placeholder="email" required>
+                <input type="number" id="telephone" placeholder="Telephone number" required>
+                <div class="dates">
+                    <span>
+                        <label for="checkin-date">Check-in date</label><br>
+                        <input id="checkin-date" type="date" placeholder="Check-in date" required>
+                    </span>
+                    <span>
+                        <label for="checkout-date">Check-out date</label><br>
+                        <input id="checkout-date" type="date" placeholder="Check-out date" required>
+                    </span>
+                </div>
+                <div class="room-type">
+                    <span>
+                        <label for="roomType">Room Type</label><br>
+                        <input type="text" id="roomType" placeholder="Check it" required> <!--change the input type to choice from specific options-->
+                    </span>
+                    <span>
+                        <label for="capacity">Choose room capacity</label><br>
+                        <input type="number" id="capacity" placeholder="Room capcity" required> <!--cahnge input to a choice of numbers-->
+                    </span>
+                </div>
+                <p>Any spacial specifications or requests</p>
+                <input type="text" placeholder="any special case" >
+            </form>
+            <article>
+                <h3>Booking Information</h3>
+    
+                <p>
+                    Make your reservation at HDLux hotel for an unforgetable experience.
+                    Our streamlined booking process ensures that your stay is tailored to your preferences right from the start.
+                </p>
+    
+                <span>
+                    <h4>Reservation policy</h4>
+                    <ul>
+                        <li>Check-int time 2:00 PM</li>
+                        <li>Check-out time 12:00 PM</li>
+                        <li>Early check-in and late check-out available upon request</li>
+                        <li>Valid ID required at check-in</li>
+                    </ul>
+                </span>
+    
+                <span>
+                    <h4>Payment Information</h4>
+                    <ul>
+                        <li>Credit card required to secure your booking</li>
+                        <li>Full payment processed at check-in</li>
+                        <li>We accept all major credit cards</li>
+                        <li>Currency conversion available</li>
+                    </ul>
+                </span>
+    
+                <span>
+                    <h4>Cancellation Policy</h4>
+                    <ul>
+                        <li>Free cancellation up to 24 hours before check-in</li>
+                        <li>Cancelation within 24 hours incur a one-night charge</li>
+                    </ul>
+                </span>
+            </article>
+        </div>
+        
+    </section>
+</body>
+</html>

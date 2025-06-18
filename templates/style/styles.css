@@ -1,0 +1,64 @@
+body{
+    background: gray;
+    margin:0;
+    
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: whitesmoke;
+    position:sticky;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    list-style-type: none;
+    margin-left: 10px;
+}
+section{
+    background-color: white;
+    width: 600px;
+    border:2px solid black;
+    padding: 20px;
+    margin: 0 auto;
+}
+/*index.html*/
+.home-info{
+    position:absolute;
+    top:60%;
+    left:10%;
+    width:max-content;
+}
+/*Book.html*/
+.book-cont div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-cont form{
+    width: 400px;
+
+}
+.book-cont content{
+    width: 400px;
+}
+.book-cont .dates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-cont .dates span{
+    width: 50%;
+}
+.room-type span{
+    width: 50%;
+}

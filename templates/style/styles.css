@@ -1,7 +1,11 @@
 body{
-    background: gray;
+    background: gray url(images/20230731_204106.jpg);
     margin:0;
-    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
 }
 header{
     display: flex;
@@ -15,16 +19,10 @@ header a{
     text-decoration: none;
     color: black;
 }
-ul{
-    display: flex;
-    justify-content: center;
-}
-ul li{
-    list-style-type: none;
-    margin-left: 10px;
-}
 section{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 600px;
     border:2px solid black;
     padding: 20px;
@@ -37,19 +35,38 @@ section{
     left:10%;
     width:max-content;
 }
+.home-header ul{
+    display: flex;
+    justify-content: center;
+}
+.home-header ul li{
+    list-style-type: none;
+    margin-left: 10px;
+}
 /*Book.html*/
+.book-cont{
+    width: max-content;
+}
 .book-cont div{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
+    padding: 10px;
 }
 .book-cont form{
     width: 400px;
-
+    padding: 10px;
+    height: 100%;
 }
-.book-cont content{
-    width: 400px;
+.book-cont span{
+    width: 100%;
+}
+.book-cont form input{
+    height: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 5px;
 }
 .book-cont .dates{
     display: flex;
@@ -62,3 +79,9 @@ section{
 .room-type span{
     width: 50%;
 }
+.book-cont article{
+    width:300px;
+    border-left: 2px solid black ;
+    padding: 10px;
+}
+/*about.html*/

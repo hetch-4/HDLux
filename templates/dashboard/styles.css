@@ -3,6 +3,7 @@ body{
     padding: 0;
     margin-left: 25vw;
     margin-right: 10px;
+    background: wheat;
 }
 aside{
     width: 20vw;
@@ -17,6 +18,10 @@ header{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(2px);
+    padding: 10px;
+    margin: 10px;
 }
 header div{
     display: flex;
@@ -51,26 +56,3 @@ header #messages{
     padding: 10px;
 }
 
-/*Login form*/
-#login-body{
-    margin:0 auto;
-}
-.login-body{
-    margin: 0 auto;
-    margin-top: 25vh;
-    width: 250px;
-    height: max-content;
-}
-.login-form{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    border: 2px solid black;
-    padding: 20px;
-    background: wheat;
-}
-.login-form input{
-    margin: 10px;
-}

@@ -7,17 +7,20 @@ import java.util.Scanner;
 import utils.DateUtils;
 
 import models.*;
+import services.*;
 
 public class App {
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Hotel Booking Management System");
-        // Initialize application components here
-        // Initialize some sample data
+        //initialize customer class //create customer
         Customer customer = new Customer(1, "John Doe", "john.doe@example.com", "1234567890");
+        //initialize Room class // create room
         Room room = new Room("Deluxe",101, 200);
+        //declare check in and checkout dates
         LocalDate checkinDate = LocalDate.parse("2023-10-01");
         LocalDate checkoutDate = LocalDate.parse("2023-10-05");
+        //initialize booking //create booking
         Booking booking = new Booking(1, customer, room, checkinDate, checkoutDate);
 
         // Print initialized data
@@ -43,7 +46,7 @@ public class App {
         room.setCheckout(checkoutDate);
 
         BookingService bookingService = new BookingService();
-        Booking booking12 = bookingService.createBooking(customer, room, checkinDate1, checkoutDate1);
+        Booking booking12 = bookingService.createBooking(customer12, room, checkinDate1, checkoutDate1);
         System.out.println("New booking created\n");
         System.out.println("Customer: " + customer + "\nRoom: " + room + "\nBooking: " + booking);
 

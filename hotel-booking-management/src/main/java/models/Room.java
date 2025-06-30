@@ -45,6 +45,14 @@ public class Room {
         return checkout;
     }
 
+    public int getCapacity(){
+        return capacity;
+    }
+
+    public double getPrice(){
+        return price;
+    }
+
     // Setters for room booking dates
     public void setCheckin(LocalDate checkin) {
         this.checkin = checkin;
@@ -53,7 +61,13 @@ public class Room {
     public void setCheckout(LocalDate checkout) {
         this.checkout = checkout;
     }
-
+    // setters for price and capacity
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
+    }
+    public void setPrice(double price){
+        this.price = price;
+    }
     // Displays the room information in a readable format
     @Override
     public String toString() {
@@ -73,5 +87,14 @@ public class Room {
         }
         // Room is available if the requested date range does not overlap with existing bookings
         return endDate.isBefore(checkin) || startDate.isAfter(checkout);
+    }
+
+    // Checks for room status
+    public String getRoomStatus() {
+        if (available) {
+            return "Available";
+        } else {
+            return "Booked";
+        }
     }
 }

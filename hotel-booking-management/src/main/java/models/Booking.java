@@ -1,5 +1,6 @@
 package models;
 
+
 import java.time.LocalDate;
 
 
@@ -70,5 +71,7 @@ public class Booking {
             "\nCheck Out Date : "+checkoutDate+
             "\n}";
     }
+
+   
 }
 

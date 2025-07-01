@@ -71,28 +71,28 @@ public class BookingService {
         }
     }
 
-    @Override
+    //@Override
     public void searchRoom(LocalDate checkin){
         //search room according to checkin and checkout dates
          
     }
 
-    @Override 
+    //@Override 
     public void searchRoom(String roomType){
         //search room according to room type
     }
 
-    @Override
+    //@Override
     public void searchRoom(int floor){
         //Search room according to the floor
     }
 
-    @Override
+    //@Override
     public void searchRoom(double price){
         //searchroom according to price
     }
 
-    @Override
+    //@Override
     public void searchRoom(boolean available){
         //search room according to available rooms
     }

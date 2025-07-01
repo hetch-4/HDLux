@@ -2,12 +2,16 @@ package models;
 
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 
 public class Booking {
     private int bookingId;
     private Customer customer;
     private Room room;
+    private long daysOfStay;
     private LocalDate checkinDate;
     private LocalDate checkoutDate;
 
@@ -17,6 +21,14 @@ public class Booking {
         this.customer = customer;
         this.room = room;
         this.checkinDate = checkinDate;
+
+        //logic to check if checkout date is after checkin
+        if(checkoutDate.isBefore(checkinDate)){
+            throw new IllegalArgumentException("Check-out date cannot be before check-in date");
+        }else{
+            this.checkoutDate =checkoutDate;
+            this.daysOfStay = ChronoUnit.DAYS.between(checkinDate, checkoutDate);
+        }
         this.checkoutDate = checkoutDate;
     }
 
@@ -58,7 +70,13 @@ public class Booking {
     }
 
     public void setCheckoutDate(LocalDate checkoutDate) {
-        this.checkoutDate = checkoutDate;
+        if (checkoutDate.isBefore(checkinDate)) {
+            throw new IllegalArgumentException("Check-out date cannot be before check-in date");
+        }else{
+            this.checkoutDate = checkoutDate;
+            this.daysOfStay = ChronoUnit.DAYS.between(checkinDate, checkoutDate);
+            
+        }
     }
 
     @Override
@@ -69,6 +87,7 @@ public class Booking {
             "\nRoom : "+room+
             "\nCheck In Date : "+checkinDate+
             "\nCheck Out Date : "+checkoutDate+
+            "\nDays of Stay : "+daysOfStay+
             "\n}";
     }
 

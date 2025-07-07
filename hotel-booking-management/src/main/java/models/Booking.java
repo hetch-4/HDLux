@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 
 public class Booking {
+
     private int bookingId;
     private Customer customer;
     private Room room;

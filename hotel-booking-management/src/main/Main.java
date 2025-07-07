@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.time.temporal.ChronoUnit;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -41,6 +41,7 @@ class Booking {
     private Room room;
     private LocalDate checkinDate;
     private LocalDate checkoutDate;
+    private long daysOfStay;
 
     // Constructor
     public Booking(int bookingId, Customer customer, Room room, LocalDate checkinDate, LocalDate checkoutDate) {
@@ -89,7 +90,13 @@ class Booking {
     }
 
     public void setCheckoutDate(LocalDate checkoutDate) {
-        this.checkoutDate = checkoutDate;
+        if (checkoutDate.isBefore(checkinDate)) {
+            throw new IllegalArgumentException("Check-out date cannot be before check-in date");
+        }else{
+            this.checkoutDate = checkoutDate;
+            this.daysOfStay = ChronoUnit.DAYS.between(checkinDate, checkoutDate);
+            
+        }
     }
 
     @Override
@@ -102,6 +109,8 @@ class Booking {
             "\nCheck Out Date : "+checkoutDate+
             "\n}";
     }
+
+    
 }
 
 
